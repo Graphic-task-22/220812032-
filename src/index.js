@@ -5,8 +5,14 @@ import cube1 from "./mesh/cube1";
 import cube from './mesh/cube';
 import sphere from './mesh/sphere';
 import plane from './mesh/plane';
+//import line from './line/line';
 import { initGUI } from './gui'; // 引入 gui.js
-
+import points from './line/EllipseCurve';
+import SplineCurve from './line/splineCurve';
+import curveObject from'./line/quadr';
+import line from './line/EllipseCurve';
+import planeMesh  from './demo/mountain';
+import { updatePosition} from  './demo/mountain';
 let renderer, camera, scene, ambientLight, pointLight; // 全局变量 场景、相机、渲染器、环境光、点光源
 
 function init() {
@@ -17,8 +23,13 @@ function init() {
   //scene.add(cube);
   //scene.add(sphere);
   //scene.add(cube1);
-  scene.add(plane);
-
+  //scene.add(plane);
+  //scene.add(line);
+ // scene.add(points);
+ //scene.add(SplineCurve);
+ //scene.add(curveObject);
+//scene.add(line);
+scene.add(planeMesh);
   // 环境光
   ambientLight = new THREE.AmbientLight(0xffffff, 2);
   scene.add(ambientLight);
@@ -78,8 +89,8 @@ function initHelper() {
   controls.addEventListener('change', () => renderer.render(scene, camera));
 
   // 网格地面（可选，与坐标轴配合使用）
-  const gridHelper = new THREE.GridHelper(300, 25, 0x444444, 0x444444);
-  scene.add(gridHelper);
+  //const gridHelper = new THREE.GridHelper(300, 25, 0x444444, 0x444444);
+  //scene.add(gridHelper);
 }
 // 初始化性能监控
 function initStats() {
@@ -98,6 +109,7 @@ function initStats() {
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
+  updatePosition();
 
   // 立方体旋转
   /*cube.rotation.x += 0.01;
