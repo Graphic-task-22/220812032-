@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js 作业三（通过隧道）</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+
+    <script type="module">
+        // 导入 Three.js 及插件（CDN路径）
+        // 导入 Three.js
+        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js';
+        // 导入轨道控制器
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import Stats  from 'three/addons/libs/stats.module.js';
+        
+        // 隧道相关变量
+        let renderer, camera, scene, tube, tubePoints, i = 0;
+
+        function init() {
+            // 创建场景
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x0d0d0d); // 深灰色背景
+            
+            // 创建隧道
+            createTunnel();
+            
+            // 创建相机
+            camera = new THREE.PerspectiveCamera(
+                75,
+                window.innerWidth / window.innerHeight,
+                0.1,
+                10000
+            );
+            camera.position.set(0, 0, -100); // 相机置于隧道入口前
+            
+            // 创建渲染器
+            // 创建渲染器（开启抗锯齿和阴影）
+            renderer = new THREE.WebGLRenderer({ 
+                antialias: true, 
+                powerPreference: "high-performance"
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.enabled = true; // 启用阴影渲染
+            document.body.appendChild(renderer.domElement);
+
+            
+            const ambientLight = new THREE.AmbientLight(0x222222, 0.6); // 环境光
+            scene.add(ambientLight);
+             // 动态聚光灯（模拟车头灯）
+             const spotLight = new THREE.SpotLight(0xffffff, 3);
+            spotLight.castShadow = true;
+            spotLight.shadow.radius = 10;
+            spotLight.position.set(0, 20, 0); // 灯光位置稍高于相机
+            camera.add(spotLight); // 灯光跟随相机移动
+
+            
+           // 轨道控制器（仅用于调试，默认禁用）
+           const controls = new OrbitControls(camera, renderer.domElement);
+            controls.enabled = false;
+
+            
+            // 性能监控（可选）
+            const stats = new Stats();
+            document.body.appendChild(stats.domElement);
+            
+            // 动画循环
+            function animate() {
+                requestAnimationFrame(animate);
+                stats.update();
+                
+                // 相机沿隧道移动
+                if (i < tubePoints.length - 1) {
+                    camera.position.copy(tubePoints[i]);
+                    camera.lookAt(tubePoints[i + 1]);
+                    i++;
+                } else {
+                    i = 0;
+                }
+                
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        function createTunnel() {
+            // 定义隧道路径曲线
+            const curve = new THREE.CatmullRomCurve3([
+                new THREE.Vector3(-120, 30, 200),
+                new THREE.Vector3(-60, 80, 150),
+                new THREE.Vector3(0, 0, 100),
+                new THREE.Vector3(80, -80, 50),
+                new THREE.Vector3(120, -40, 0),
+                new THREE.Vector3(180, 60, -50),
+                new THREE.Vector3(140, 100, -100),
+                new THREE.Vector3(0, -100, -200)
+            ], false, "catmullrom"); // 使用catmullrom插值
+
+            
+            // 创建隧道几何体
+            const geometry = new THREE.TubeGeometry(
+                curve, 
+                300, // 更多分段数（原200）
+                12, // 隧道半径（原10）
+                48, // 截面分段数（原32，更圆滑）
+                false
+            );
+
+            
+            // 纹理加载（使用公开CDN纹理，可替换为自己的纹理）
+            const loader = new THREE.TextureLoader();
+            const texture = loader.load('./public/assets/tunnel.png');
+            texture.wrapS = THREE.RepeatWrapping;
+            texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(8, 5);
+            
+            // 创建隧道材质
+            const material = new THREE.MeshBasicMaterial({
+                map: texture,
+                side: THREE.DoubleSide,
+                color: 0x888888 // 基础金属颜色
+            });
+            
+            // 创建隧道网格
+            tube = new THREE.Mesh(geometry, material);
+            tube.castShadow = true; // 投射阴影
+            tube.receiveShadow = true; // 接收阴影
+            scene.add(tube);
+            
+            // 获取隧道路径点
+            tubePoints = curve.getPoints(2000);
+        }
+
+        // 初始化
+        init();
+    </script>
+</body>
+</html>
