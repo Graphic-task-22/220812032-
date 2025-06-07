@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js 作业二（随机山脉）</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        canvas { display: block; }
+        #coordinates {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Three.js 作业二（山脉）【鼠标拖动: 旋转视角；滚轮: 缩放；Shift+拖动: 平移】</h1>
+
+
+    <canvas id="webglCanvas"></canvas>
+    <div id="coordinates">坐标: x: 0, y: 0, z: 0</div>
+
+    <script type="module">
+        // 导入 Three.js
+        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js';
+        // 导入轨道控制器
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        // 导入噪声函数
+        import { createNoise2D } from 'https://unpkg.com/simplex-noise@4.0.1/dist/esm/simplex-noise.js';
+
+        // 创建场景、相机、渲染器
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x000000); // 设置为纯黑色; // 设置背景色
+        
+        const camera = new THREE.PerspectiveCamera(
+            55, // 减小视角，让山脉看起来更大
+            window.innerWidth / window.innerHeight,
+            0.1,
+            2000
+        );
+        camera.position.set(15, 100, 300); // 调整相机位置
+
+        const renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById('webglCanvas'),
+            antialias: true
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio); // 适配高DPI屏幕
+
+        // 添加环境光和方向光
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+        
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(directionalLight);
+
+        // 创建较小的平面几何体 (从500x500减小到300x300)
+        const geometry = new THREE.PlaneGeometry(300, 300, 100, 100); // 减小尺寸并减少分段
+        
+        // 使用MeshPhongMaterial以获得更好的光照效果
+        const material = new THREE.MeshPhongMaterial({
+            color: 0xFFD700, // 金色
+            wireframe: true,
+            side: THREE.DoubleSide
+        });
+
+        // 创建平面网格并旋转
+        const mountainMesh = new THREE.Mesh(geometry, material);
+        mountainMesh.rotateX(-Math.PI / 2); // 平面朝上
+        scene.add(mountainMesh);
+
+        // 添加坐标轴辅助
+        const axesHelper = new THREE.AxesHelper(200);
+        scene.add(axesHelper);
+
+        // 创建轨道控制器
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true; // 启用阻尼效果
+        controls.dampingFactor = 0.05;
+        controls.enableZoom = true; // 启用缩放
+        controls.enablePan = true;  // 启用平移
+
+        // 噪声函数和时间缓存
+        const noise2D = createNoise2D();
+        let prevTime = Date.now();
+        let coordinatesElement = document.getElementById('coordinates');
+
+        function updatePosition() {
+            const currentTime = Date.now();
+            const deltaTime = (currentTime - prevTime) * 0.001;
+            prevTime = currentTime;
+
+            const positions = geometry.attributes.position;
+            for (let i = 0; i < positions.count; i++) {
+                const x = positions.getX(i);
+                const y = positions.getY(i);
+
+                // 减小噪声强度，使山脉更平缓
+                const z = noise2D(x / 80, y / 80) * 30;
+
+                // 动画效果
+                const sinNum1 = Math.sin((currentTime * 0.002 + x * 0.05));
+                const sinNum2 = Math.cos((currentTime * 0.001 + y * 0.03));
+                const animatedHeight = (sinNum1 + sinNum2) * 5; // 减小动画幅度
+
+                positions.setZ(i, z + animatedHeight);
+            }
+            positions.needsUpdate = true;
+            geometry.computeVertexNormals(); // 更新法线以正确显示光照
+
+            // 更新坐标显示
+            const camPos = camera.position;
+            coordinatesElement.textContent = `坐标: x: ${camPos.x.toFixed(1)}, y: ${camPos.y.toFixed(1)}, z: ${camPos.z.toFixed(1)}`;
+        }
+
+        // 动画循环
+        function animate() {
+            requestAnimationFrame(animate);
+            updatePosition();
+            controls.update(); // 更新控制器
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // 窗口Resize处理
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        
+    </script>
+</body>
+</html>
