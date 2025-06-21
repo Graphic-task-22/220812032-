@@ -1,0 +1,11 @@
+Model Information:
+* title:	Basket
+* source:	https://sketchfab.com/3d-models/basket-f097383b0dc949759f7a544b49a4729b
+* author:	National Heritage Administration (https://sketchfab.com/NHA_Asset)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Basket" (https://sketchfab.com/3d-models/basket-f097383b0dc949759f7a544b49a4729b) by National Heritage Administration (https://sketchfab.com/NHA_Asset) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

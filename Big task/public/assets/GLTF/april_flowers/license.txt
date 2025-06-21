@@ -1,0 +1,11 @@
+Model Information:
+* title:	April Flowers
+* source:	https://sketchfab.com/3d-models/april-flowers-5612acc3504b4645ad64bd2f7fe97ebb
+* author:	BeckyKaganSchott (https://sketchfab.com/BeckyKaganSchott)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "April Flowers" (https://sketchfab.com/3d-models/april-flowers-5612acc3504b4645ad64bd2f7fe97ebb) by BeckyKaganSchott (https://sketchfab.com/BeckyKaganSchott) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

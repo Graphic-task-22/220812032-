@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Soviet Bus Stop
+* source:	https://sketchfab.com/3d-models/old-soviet-bus-stop-fe4d132434c24e1c8447a6d1190e8c6d
+* author:	GameDev Nick (https://sketchfab.com/GameDevNick)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Soviet Bus Stop" (https://sketchfab.com/3d-models/old-soviet-bus-stop-fe4d132434c24e1c8447a6d1190e8c6d) by GameDev Nick (https://sketchfab.com/GameDevNick) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

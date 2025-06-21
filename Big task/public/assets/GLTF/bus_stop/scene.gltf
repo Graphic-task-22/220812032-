@@ -1,0 +1,821 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 492,
+      "max": [
+        0.6481237411499023,
+        0.3238998353481293,
+        1.5190916061401367
+      ],
+      "min": [
+        -0.3024402856826782,
+        -2.1473641395568848,
+        -0.29576581716537476
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 5904,
+      "componentType": 5126,
+      "count": 492,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 492,
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999995827674866,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 492,
+      "max": [
+        0.986543595790863,
+        0.9880931377410889
+      ],
+      "min": [
+        0.006813527084887028,
+        0.006813527084887028
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 786,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 11808,
+      "componentType": 5126,
+      "count": 192,
+      "max": [
+        0.6733133792877197,
+        0.314724326133728,
+        1.5461214780807495
+      ],
+      "min": [
+        -0.3294540047645569,
+        -2.144362688064575,
+        1.2852693796157837
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 14112,
+      "componentType": 5126,
+      "count": 192,
+      "max": [
+        0.9566519856452942,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9566524028778076,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 7872,
+      "componentType": 5126,
+      "count": 192,
+      "max": [
+        0.9999995827674866,
+        0.999997079372406,
+        0.9566448926925659,
+        1.0
+      ],
+      "min": [
+        -0.9999996423721313,
+        -0.999997079372406,
+        -0.9999940991401672,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 3936,
+      "componentType": 5126,
+      "count": 192,
+      "max": [
+        0.9758855700492859,
+        0.9767369627952576
+      ],
+      "min": [
+        0.006813527084887028,
+        0.006813527084887028
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 3144,
+      "componentType": 5125,
+      "count": 450,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16416,
+      "componentType": 5126,
+      "count": 444,
+      "max": [
+        -0.04243921488523483,
+        0.28086233139038086,
+        0.05762939900159836
+      ],
+      "min": [
+        -0.2231585532426834,
+        -2.1105008125305176,
+        -0.09934365004301071
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 21744,
+      "componentType": 5126,
+      "count": 444,
+      "max": [
+        0.999995768070221,
+        0.9999921917915344,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9999921917915344,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 10944,
+      "componentType": 5126,
+      "count": 444,
+      "max": [
+        1.0,
+        0.9238138794898987,
+        0.9999841451644897,
+        1.0
+      ],
+      "min": [
+        -0.9999995827674866,
+        -0.9238056540489197,
+        -0.9999999403953552,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5472,
+      "componentType": 5126,
+      "count": 444,
+      "max": [
+        0.9914373755455017,
+        0.992092490196228
+      ],
+      "min": [
+        0.025088077411055565,
+        0.10718879103660583
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4944,
+      "componentType": 5125,
+      "count": 774,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 27072,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.6223033666610718,
+        0.2960870862007141,
+        1.2780133485794067
+      ],
+      "min": [
+        -0.29099029302597046,
+        -2.125725507736206,
+        -0.07676147669553757
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 27840,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 18048,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.9999970197677612,
+        0.001007618848234415,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999995827674866,
+        -1.0,
+        -0.0038458439521491528,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 9024,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.9421984553337097,
+        0.7333150506019592
+      ],
+      "min": [
+        0.006813527084887028,
+        0.006813527084887028
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 8040,
+      "componentType": 5125,
+      "count": 132,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 28608,
+      "componentType": 5126,
+      "count": 2837,
+      "max": [
+        0.14207813143730164,
+        0.18001769483089447,
+        0.4031521677970886
+      ],
+      "min": [
+        -0.2748224437236786,
+        -1.9881772994995117,
+        -0.05352189764380455
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 62652,
+      "componentType": 5126,
+      "count": 2837,
+      "max": [
+        0.9989141225814819,
+        0.9998161792755127,
+        1.0
+      ],
+      "min": [
+        -0.9974767565727234,
+        -0.9998728632926941,
+        -0.9991082549095154
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 19072,
+      "componentType": 5126,
+      "count": 2837,
+      "max": [
+        1.0,
+        0.8813939690589905,
+        0.9999111890792847,
+        1.0
+      ],
+      "min": [
+        -0.9999198317527771,
+        -0.9996913075447083,
+        -0.9998983144760132,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 9536,
+      "componentType": 5126,
+      "count": 2837,
+      "max": [
+        0.9929139018058777,
+        0.9931864738464355
+      ],
+      "min": [
+        0.00985282938927412,
+        0.006813527084887028
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 8568,
+      "componentType": 5125,
+      "count": 10950,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "GameDev Nick (https://sketchfab.com/GameDevNick)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/old-soviet-bus-stop-fe4d132434c24e1c8447a6d1190e8c6d",
+      "title": "Old Soviet Bus Stop"
+    },
+    "generator": "Sketchfab-14.35.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 52368,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32232,
+      "byteOffset": 52368,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 96696,
+      "byteOffset": 84600,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 64464,
+      "byteOffset": 181296,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 245760,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/base_baseColor.png"
+    },
+    {
+      "uri": "textures/base_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/base_normal.png"
+    },
+    {
+      "uri": "textures/roof_baseColor.png"
+    },
+    {
+      "uri": "textures/roof_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/roof_normal.png"
+    },
+    {
+      "uri": "textures/metal_baseColor.png"
+    },
+    {
+      "uri": "textures/metal_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/metal_normal.png"
+    },
+    {
+      "uri": "textures/glass_baseColor.png"
+    },
+    {
+      "uri": "textures/glass_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/glass_normal.png"
+    },
+    {
+      "uri": "textures/seat_baseColor.png"
+    },
+    {
+      "uri": "textures/seat_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/seat_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "base",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "roof",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        },
+        "roughnessFactor": 0.602535788142162
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "metal",
+      "normalTexture": {
+        "index": 8
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        }
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "glass",
+      "normalTexture": {
+        "index": 11
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          0.3961775259215044
+        ],
+        "baseColorTexture": {
+          "index": 9
+        },
+        "metallicRoughnessTexture": {
+          "index": 10
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "seat",
+      "normalTexture": {
+        "index": 14,
+        "scale": 0.3172758374253706
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 12
+        },
+        "metallicRoughnessTexture": {
+          "index": 13
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "BusStop_low_base_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BusStop_low_roof_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BusStop_low_metal_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BusStop_low_glass_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BusStop_low_seat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TANGENT": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 24,
+          "material": 4,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "b62417acee574c418c8dc8b596f9ea67.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        -17.192968368530273,
+        -61.9323616027832,
+        -91.48193359375,
+        1.0
+      ],
+      "name": "BusStop_low"
+    },
+    {
+      "mesh": 0,
+      "name": "BusStop_low_base_0"
+    },
+    {
+      "mesh": 1,
+      "name": "BusStop_low_roof_0"
+    },
+    {
+      "mesh": 2,
+      "name": "BusStop_low_metal_0"
+    },
+    {
+      "mesh": 3,
+      "name": "BusStop_low_glass_0"
+    },
+    {
+      "mesh": 4,
+      "name": "BusStop_low_seat_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    },
+    {
+      "sampler": 0,
+      "source": 9
+    },
+    {
+      "sampler": 0,
+      "source": 10
+    },
+    {
+      "sampler": 0,
+      "source": 11
+    },
+    {
+      "sampler": 0,
+      "source": 12
+    },
+    {
+      "sampler": 0,
+      "source": 13
+    },
+    {
+      "sampler": 0,
+      "source": 14
+    }
+  ]
+}

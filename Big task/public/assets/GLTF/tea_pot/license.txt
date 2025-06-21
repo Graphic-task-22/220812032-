@@ -1,0 +1,11 @@
+Model Information:
+* title:	Copper Tea Pot
+* source:	https://sketchfab.com/3d-models/copper-tea-pot-27f2ac58f7614f2796630bdc6f18ee2f
+* author:	Richard Speight (https://sketchfab.com/richardsp8.2)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Copper Tea Pot" (https://sketchfab.com/3d-models/copper-tea-pot-27f2ac58f7614f2796630bdc6f18ee2f) by Richard Speight (https://sketchfab.com/richardsp8.2) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

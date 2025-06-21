@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vintage Bicycle 3D Model
+* source:	https://sketchfab.com/3d-models/vintage-bicycle-3d-model-6ece4b5069c14b06bc4eaea53550cf13
+* author:	patrickgoud2 (https://sketchfab.com/patrickgoud2)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vintage Bicycle 3D Model" (https://sketchfab.com/3d-models/vintage-bicycle-3d-model-6ece4b5069c14b06bc4eaea53550cf13) by patrickgoud2 (https://sketchfab.com/patrickgoud2) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

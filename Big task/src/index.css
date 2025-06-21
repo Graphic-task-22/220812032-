@@ -1,0 +1,220 @@
+:root { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(36, 44, 32, 0.9); /* 深绿调，更自然 */
+  background-color: #f5f2e7;  /* 淡米色背景 */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #2f4f4f; /* 深灰绿色 */
+    background-color: #fffdf8; /* 纯净米白 */
+  }
+}
+
+#collection-progress {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: linear-gradient(135deg, #a8d5ba, #f0e6d2); /* 柔和渐变绿到米色 */
+  color: #3a4a3f; /* 深绿灰文字 */
+
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.03em;
+
+  padding: 12px 28px;
+  border-radius: 24px;
+
+  box-shadow:
+    0 4px 8px rgba(72, 94, 66, 0.25),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.7);
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  z-index: 1000;
+  pointer-events: none;
+
+  /* 轻微浮动动画，增加活力 */
+  animation: floatShadow 4s ease-in-out infinite;
+}
+
+/* 在CSS文件中添加以下样式 */
+#weather-toggle {
+  position: fixed;
+  top: 90px;
+  right: 30px;
+  
+  background: linear-gradient(135deg, #6b92a8, #a8d5ba); /* 蓝绿色渐变 */
+  color: #f0f8ff; /* 淡蓝色文字 */
+  
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.03em;
+  
+  padding: 12px 28px;
+  border-radius: 24px;
+  
+  box-shadow:
+    0 4px 8px rgba(50, 80, 100, 0.25),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.5);
+  
+  -webkit-user-select: none;
+  user-select: none;
+  
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* 悬停效果 */
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 6px 12px rgba(50, 80, 100, 0.3),
+      inset 0 -2px 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* 点击效果 */
+  &:active {
+    transform: translateY(1px);
+    background-color: #4CAF50; /* 绿色表示天气效果已激活 */
+    box-shadow:
+      0 2px 4px rgba(50, 80, 100, 0.2),
+      inset 0 -1px 3px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* 加载页面样式优化 */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 优化后的渐变背景，使用乡村风格的自然色彩 */
+  background: linear-gradient(135deg, #e6f2d3 0%, #d0e7c5 25%, #b5d8a9 50%, #9dc993 75%, #87b97d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.1s ease-out;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-container {
+  background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(240,248,230,0.85) 100%);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(72, 94, 66, 0.25);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  color: #3a4a3f;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #d8e4dd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: inset 0 2px 5px rgba(72, 94, 66, 0.2);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+#progress-text {
+  color: #3a4a3f;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #6b92a8, #a8d5ba);
+  color: #f0f8ff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(50, 80, 100, 0.25);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  /* 初始禁用状态样式通过:disabled伪类控制 */
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(50, 80, 100, 0.3);
+}
+
+.start-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(50, 80, 100, 0.2);
+}
+
+/* 启用状态通过类名控制样式 */
+.start-button.enabled {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  box-shadow: 0 4px 8px rgba(60, 120, 60, 0.25);
+  cursor: pointer;
+}
+
+/* 禁用状态通过:disabled伪类控制 */
+.start-button:disabled {
+  background: linear-gradient(135deg, #cccccc, #bbbbbb);
+  box-shadow: 0 2px 4px rgba(150, 150, 150, 0.25);
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none !important;
+}    
+/* 在CSS文件中添加任务对话框样式 */
+#task-dialog {
+  font-family: 'Microsoft YaHei', sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}

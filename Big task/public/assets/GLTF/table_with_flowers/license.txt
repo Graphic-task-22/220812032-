@@ -1,0 +1,11 @@
+Model Information:
+* title:	Table with flowers
+* source:	https://sketchfab.com/3d-models/table-with-flowers-2ac3550946324e9ab9d78b271a60bd78
+* author:	temka.mumu (https://sketchfab.com/temka.mumu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Table with flowers" (https://sketchfab.com/3d-models/table-with-flowers-2ac3550946324e9ab9d78b271a60bd78) by temka.mumu (https://sketchfab.com/temka.mumu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

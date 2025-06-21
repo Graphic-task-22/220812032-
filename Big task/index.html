@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Three.js《乡村寻宝》大作业</title>
+  <script type="module" src="/src/main.js"></script>
+  <link rel="stylesheet" href="/src/index.css" />
+  <!-- 引入本地Font Awesome -->
+  <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="webglCanvas"></canvas>
+
+  <!-- 新增加载页面 -->
+  <div id="loading-screen" >
+    <div class="loading-container">
+      <h1>游戏加载中，请稍等~~~</h1>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p id="progress-text">0%</p>
+      <button id="start-game" class="start-button" disabled>开始游戏</button>
+    </div>
+  </div>
+  <!-- 在HTML文件中添加任务对话框 -->
+<div id="task-dialog" class="hidden"></div>
+
+  <!--初始隐藏 -->
+  <div id="collection-progress" class="hidden">收集进度：0/10</div>
+  <button id="weather-toggle" class="weather-btn hidden">
+    <i class="fa fa-sun-o"></i> 切换为下雪
+  </button>
+</body>
+</html>
